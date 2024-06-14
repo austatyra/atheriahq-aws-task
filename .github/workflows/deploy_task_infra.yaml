@@ -33,6 +33,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.ROLE_TO_ASSUME }}
           aws-region: ${{ env.AWS_REGION }}
+          role-session-name: mySession1
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
